@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    font-family: "Black Ops One";
+    font-size: 70px;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+h3{
+    color: white;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 45px;
+    font-weight: 100;
+    margin-bottom: 25px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.play-again, .exit {
+    background-color: #D9D9D9;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    font-family: 'Noto Sans Display', sans-serif;
+    margin-right: 10px;
+    width: 210px;
+}
