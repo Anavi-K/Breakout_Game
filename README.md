@@ -2,8 +2,6 @@
 
 BREAKOUT
 
-Deployed Link: https://anavi-k.github.io/Breakout_Game/
-
 Day 1, Monday:
 - Decided on recreating Arcanoid, a popular arcade game
 - Planned out five screens
