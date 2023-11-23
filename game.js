@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function startGameHandler(e) {
-      if (e.key === "Space" && !gameStarted) {
+      if (e.code === "Space" && !gameStarted) {
           gameStarted = true;
           draw();
       }
