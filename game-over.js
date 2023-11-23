@@ -1,10 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Retrieve name and nickname from local storage
-    const name = localStorage.getItem("name");
-    const nickname = localStorage.getItem("nickname");
-  
-    // Display name and nickname in the name-display
-    const nameDisplay = document.querySelector(".name-display");
-    nameBox.textContent = `Name: ${name} | Nickname: ${nickname}`;
-  
-  });
+  // Retrieve the stored score, name, and nickname from localStorage
+  var finalScore = localStorage.getItem("finalScore");
+  var playerName = localStorage.getItem("name");
+  var playerNickname = localStorage.getItem("nickname");
+
+  // Display the score in the score div
+  var scoreDiv = document.querySelector(".score");
+
+  // Style the text
+  scoreDiv.style.color = "#FFFFFF";
+  scoreDiv.style.fontSize = "40px"; // Adjust the font size as needed
+  scoreDiv.style.textAlign = "center";
+
+  scoreDiv.textContent = "Score: " + finalScore;
+
+  // Display the name and nickname in the name-display div
+  var nameDisplayDiv = document.querySelector(".name-display");
+
+  // Combine the name and nickname strings without line breaks
+  var nameAndNickname = "";
+  if (playerName) {
+    nameAndNickname += "Name: " + playerName;
+    if (playerNickname) {
+      nameAndNickname += " | Nickname: " + playerNickname;
+    }
+  } else if (playerNickname) {
+    nameAndNickname += "Nickname: " + playerNickname;
+  }
+
+  // Set the inner HTML of the name-display div
+  nameDisplayDiv.innerHTML = nameAndNickname;
+
+  // Style the text in the name-display div
+  nameDisplayDiv.style.color = "#FFFFFF";
+  nameDisplayDiv.style.fontSize = "24px"; // Adjust the font size as needed
+  nameDisplayDiv.style.textAlign = "center";
+});
