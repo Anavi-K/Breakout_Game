@@ -17,4 +17,9 @@ Day 2, Tuesday:
 - Researched how to implement javascript for the game
 
 Day 3, Wednesday:
-- Start javascript for the game
+- Started javascript for the game
+- Finished javascript coding for everything but the main game
+
+Day 4, Thursday:
+- Finished the entire code
+- Finished debugging
