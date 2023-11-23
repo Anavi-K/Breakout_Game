@@ -31,6 +31,6 @@ canvas{
 }
   
 .name-box p {
-    margin: 0; /* Remove default paragraph margin */
-    font-size: 20px; /* Adjust the font size as needed */
+    margin: 0;
+    font-size: 20px; 
 }

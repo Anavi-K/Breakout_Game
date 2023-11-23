@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const nameBox = document.querySelector(".name-box");
   nameBox.textContent = `Name: ${name} | Nickname: ${nickname}`;
 
+  //style for text in name-box
   nameBox.style.color = "#FFFFFF";
-  nameBox.style.fontSize = "24px"; // Adjust the font size as needed
+  nameBox.style.fontSize = "24px";
   nameBox.style.textAlign = "center";
 
   var canvas = document.getElementById("game");
@@ -81,8 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Reset the ball position
       x = canvas.width / 2;
       y = canvas.height - 30;
-      dx = 2.5; // Reset the ball speed in the x direction
-      dy = -2.5; // Reset the ball speed in the y direction
+      dx = 2.5; // ball speed in the x direction
+      dy = -2.5; // ball speed in the y direction
   }
 
   function gameOver() {

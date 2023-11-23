@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  
   // Retrieve the stored score, name, and nickname from localStorage
   var finalScore = localStorage.getItem("finalScore");
   var playerName = localStorage.getItem("name");
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Style the text
   scoreDiv.style.color = "#FFFFFF";
-  scoreDiv.style.fontSize = "40px"; // Adjust the font size as needed
+  scoreDiv.style.fontSize = "40px";
   scoreDiv.style.textAlign = "center";
 
   scoreDiv.textContent = "Score: " + finalScore;
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Display the name and nickname in the name-display div
   var nameDisplayDiv = document.querySelector(".name-display");
 
-  // Combine the name and nickname strings without line breaks
+  // Combine the name and nickname strings
   var nameAndNickname = "";
   if (playerName) {
     nameAndNickname += "Name: " + playerName;
@@ -31,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Set the inner HTML of the name-display div
   nameDisplayDiv.innerHTML = nameAndNickname;
 
-  // Style the text in the name-display div
+  // Style for text in the name-display div
   nameDisplayDiv.style.color = "#FFFFFF";
-  nameDisplayDiv.style.fontSize = "24px"; // Adjust the font size as needed
+  nameDisplayDiv.style.fontSize = "24px";
   nameDisplayDiv.style.textAlign = "center";
 });
