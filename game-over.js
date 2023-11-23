@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   
+  const audio = new Audio('./audio/kl-peach-game-over-iii-142453.mp3');
+  audio.play();
+
   // Retrieve the stored score, name, and nickname from localStorage
   var finalScore = localStorage.getItem("finalScore");
   var playerName = localStorage.getItem("name");

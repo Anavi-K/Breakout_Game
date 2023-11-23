@@ -21,13 +21,21 @@ body{
     width: 40px;
 }
 
-  
 h1{
     color: white;
     font-family: "Black Ops One";
     font-size: 110px;
     font-weight: 100;
     text-align: center;
+}
+
+h1 {
+    animation: expand-retract 2s infinite;
+}
+   
+@keyframes expand-retract {
+0%, 100% { font-size: 6em; }
+50% { font-size: 7em; }
 }
   
 .start {
