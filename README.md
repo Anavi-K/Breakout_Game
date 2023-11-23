@@ -14,7 +14,7 @@ Day 2, Tuesday:
 - Coded the html and css for all pages
 - Got feedback
 - Did the finishing touches and made improvements based on feedback
-- Research for how to implement javascript for the game
+- Researched how to implement javascript for the game
 
 Day 3, Wednesday:
 - Start javascript for the game

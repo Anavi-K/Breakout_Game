@@ -13,7 +13,7 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: center; 
     width: 80%; 
     text-align: center;
     color: #fff;
@@ -26,14 +26,14 @@ body {
     background-color: #1e1e1e;
 }
 
-.lives, .score {
-    font-family: 'Noto Sans Display', sans-serif;
-    font-size: 30px;
-}
-
 .game{
     display: block;
     border: 5px solid #fff;
     width: 1200px;
     height: 455px;
+}
+  
+.name-box p {
+    margin: 0; /* Remove default paragraph margin */
+    font-size: 20px; /* Adjust the font size as needed */
 }
