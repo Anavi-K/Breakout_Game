@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var loseLifeSound = document.getElementById("loseLifeSound");
 
   var canvas = document.getElementById("game");
-  var ctx = canvas.getContext("2d");
+  var context = canvas.getContext("2d");
   var ballRadius = 7;
   var x = canvas.width / 2;
   var y = canvas.height - 30;
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function startGameHandler(e) {
-      if (e.code === "Space" && !gameStarted) {
+      if (e.key === "Space" && !gameStarted) {
           gameStarted = true;
           draw();
       }
@@ -119,19 +119,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function drawBall() {
-      ctx.beginPath();
-      ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-      ctx.fillStyle = "#FFFFFF";
-      ctx.fill();
-      ctx.closePath();
+      context.beginPath();
+      context.arc(x, y, ballRadius, 0, Math.PI * 2);
+      context.fillStyle = "#FFFFFF";
+      context.fill();
+      context.closePath();
   }
 
   function drawPaddle() {
-      ctx.beginPath();
-      ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-      ctx.fillStyle = "#FFFFFF";
-      ctx.fill();
-      ctx.closePath();
+      context.beginPath();
+      context.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+      context.fillStyle = "#FFFFFF";
+      context.fill();
+      context.closePath();
   }
 
   function drawBricks() {
@@ -142,11 +142,11 @@ document.addEventListener("DOMContentLoaded", function () {
                   var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
                   bricks[c][r].x = brickX;
                   bricks[c][r].y = brickY;
-                  ctx.beginPath();
-                  ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                  ctx.fillStyle = "#FFFFFF";
-                  ctx.fill();
-                  ctx.closePath();
+                  context.beginPath();
+                  context.rect(brickX, brickY, brickWidth, brickHeight);
+                  context.fillStyle = "#FFFFFF";
+                  context.fill();
+                  context.closePath();
               }
           }
       }
@@ -154,24 +154,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function draw() {
       if (!gameStarted) {
-          ctx.font = "25px Arial";
-          ctx.fillStyle = "#FFFFFF";
+          context.font = "25px Arial";
+          context.fillStyle = "#FFFFFF";
           var text = "Press Space Bar to Start";
-          var textWidth = ctx.measureText(text).width;
-          ctx.fillText(text, (canvas.width - textWidth) / 2, canvas.height / 2);
+          var textWidth = context.measureText(text).width;
+          context.fillText(text, (canvas.width - textWidth) / 2, canvas.height / 2);
           return;
       }
 
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      context.clearRect(0, 0, canvas.width, canvas.height);
       drawBricks();
       drawBall();
       drawPaddle();
       collisionDetection();
 
-      ctx.font = "18px Arial";
-      ctx.fillStyle = "#FFFFFF";
-      ctx.fillText("Lives: " + lives + "/3", 10, 20);
-      ctx.fillText("Score: " + score, canvas.width - 80, 20);
+      context.font = "18px Arial";
+      context.fillStyle = "#FFFFFF";
+      context.fillText("Lives: " + lives + "/3", 10, 20);
+      context.fillText("Score: " + score, canvas.width - 80, 20);
 
       if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
           dx = -dx;

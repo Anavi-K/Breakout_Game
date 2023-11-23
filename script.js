@@ -18,5 +18,3 @@ function toggleAudio() {
     localStorage.setItem('audioState', 'paused');
   }
 }
-  
-  
