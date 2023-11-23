@@ -21,5 +21,6 @@ Day 3, Wednesday:
 - Finished javascript coding for everything but the main game
 
 Day 4, Thursday:
+- Added audio
 - Finished the entire code
 - Finished debugging

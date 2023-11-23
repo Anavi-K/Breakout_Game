@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
   nameBox.style.fontSize = "24px";
   nameBox.style.textAlign = "center";
 
+  var hitPaddleSound = document.getElementById("hitPaddleSound");
+  var hitBrickSound = document.getElementById("hitBrickSound");
+  var loseLifeSound = document.getElementById("loseLifeSound");
+
   var canvas = document.getElementById("game");
   var ctx = canvas.getContext("2d");
   var ballRadius = 7;
@@ -79,22 +83,23 @@ document.addEventListener("DOMContentLoaded", function () {
           }
       }
 
-      // Reset the ball position
       x = canvas.width / 2;
       y = canvas.height - 30;
-      dx = 2.5; // ball speed in the x direction
-      dy = -2.5; // ball speed in the y direction
+      dx = 2.5;
+      dy = -2.5;
   }
 
   function gameOver() {
-      // Store the score in localStorage for access in game-over.html
       localStorage.setItem("finalScore", score);
-
-      // Navigate to game-over.html
       window.location.href = "game-over.html";
   }
 
   function collisionDetection() {
+      if (x > paddleX && x < paddleX + paddleWidth && y + dy > canvas.height - ballRadius - paddleHeight) {
+          dy = -dy;
+          hitPaddleSound.play(); // Play hit paddle sound
+      }
+
       for (var c = 0; c < brickColumnCount; c++) {
           for (var r = 0; r < brickRowCount; r++) {
               var b = bricks[c][r];
@@ -103,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
                       dy = -dy;
                       b.status = "broken";
                       score++;
+                      hitBrickSound.play(); // Play hit brick sound
                       if (score == brickRowCount * brickColumnCount) {
                           resetBricks();
                       }
@@ -177,6 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
               dy = -dy;
           } else {
               lives--;
+              loseLifeSound.play(); // Play lose life sound
               if (lives == 0) {
                   gameOver();
                   return;
