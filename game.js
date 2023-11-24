@@ -153,16 +153,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function draw() {
+     context.clearRect(0, 0, canvas.width, canvas.height);
+
       if (!gameStarted) {
-          context.font = "25px Arial";
+          context.font = "24px Arial";
           context.fillStyle = "#FFFFFF";
-          var text = "Press Space Bar to Start";
-          var textWidth = context.measureText(text).width;
-          context.fillText(text, (canvas.width - textWidth) / 2, canvas.height / 2);
+          context.fillText("Press Space Bar to Start", canvas.width / 2 - 140, canvas.height / 2);
           return;
       }
 
-      context.clearRect(0, 0, canvas.width, canvas.height);
       drawBricks();
       drawBall();
       drawPaddle();

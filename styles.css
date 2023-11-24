@@ -11,16 +11,6 @@ body{
     background-color: black;
 }
 
-.sound {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.sound img {
-    width: 40px;
-}
-
 h1{
     color: white;
     font-family: "Black Ops One";

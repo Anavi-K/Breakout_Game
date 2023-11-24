@@ -20,6 +20,15 @@ h1 {
     margin-bottom: 15px;
 }
 
+h1 {
+    animation: expand-retract 2s infinite;
+}
+   
+@keyframes expand-retract {
+0%, 100% { font-size: 6em; }
+50% { font-size: 7em; }
+}
+
 .name-display {
     display: flex;
     justify-content: center;
