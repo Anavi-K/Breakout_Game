@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
       collisionDetection();
   
       // Display lives and score
-      context.font = "18px Arial";
+      context.font = "15px Arial";
       context.fillStyle = "#FFFFFF";
       context.fillText("Lives: " + lives + "/3", 10, 20);
       context.fillText("Score: " + score, canvas.width - 80, 20);
