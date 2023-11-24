@@ -23,4 +23,6 @@ Day 3, Wednesday:
 Day 4, Thursday:
 - Added audio
 - Finished the entire code
-- Finished debugging
+
+Day 5, Friday:
+- Debugging
