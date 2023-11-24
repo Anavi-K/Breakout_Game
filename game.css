@@ -36,7 +36,7 @@ canvas{
 }
 
 /* Responsive adjustments using media queries */
-@media only screen and (min-width: 400px) {
+@media only screen and (max-width: 400px) {
     .name-box {
         width: 60%;
     }
@@ -47,7 +47,7 @@ canvas{
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
     .name-box {
         width: 50%;
     }
