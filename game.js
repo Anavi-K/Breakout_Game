@@ -59,26 +59,16 @@ document.addEventListener("DOMContentLoaded", function () {
     var score = 0;
   
     // Event listeners
-    document.addEventListener("keydown", keyDownHandler, false);
-    document.addEventListener("keyup", keyUpHandler, false);
-    document.addEventListener("keydown", startGameHandler, false);
-  
-    // Event handler functions
-    function keyDownHandler(e) {
-      if (e.key == "Right" || e.key == "ArrowRight") {
-        rightPressed = true;
-      } else if (e.key == "Left" || e.key == "ArrowLeft") {
-        leftPressed = true;
-      }
-    }
-  
-    function keyUpHandler(e) {
-      if (e.key == "Right" || e.key == "ArrowRight") {
-        rightPressed = false;
-      } else if (e.key == "Left" || e.key == "ArrowLeft") {
-        leftPressed = false;
-      }
-    }
+    document.addEventListener("mousemove", mouseMoveHandler, false);
+document.addEventListener("keydown", startGameHandler, false);
+
+// Event handler functions
+function mouseMoveHandler(e) {
+  var relativeX = e.clientX - canvas.offsetLeft;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth / 2;
+  }
+}
   
     function startGameHandler(e) {
       if (e.code === "Space" && !gameStarted) {
@@ -175,10 +165,12 @@ document.addEventListener("DOMContentLoaded", function () {
     function draw() {
       context.clearRect(0, 0, canvas.width, canvas.height);
   
-      if (!gameStarted) {
-        context.font = "24px Arial";
+      if(!gameStarted){
+        context.font = "25px Arial";
         context.fillStyle = "#FFFFFF";
-        context.fillText("Press Space Bar to Start", canvas.width / 2 - 140, canvas.height / 2);
+        var text = "Press Space Bar to Start";
+        var textWidth = context.measureText(text).width;
+        context.fillText(text, (canvas.width - textWidth) / 2, canvas.height / 2);
         return;
       }
   
