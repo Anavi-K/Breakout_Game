@@ -34,3 +34,26 @@ canvas{
     margin: 0;
     font-size: 20px; 
 }
+
+/* Responsive adjustments using media queries */
+@media only screen and (min-width: 400px) {
+    .name-box {
+        width: 60%;
+    }
+
+    canvas {
+        width: 50%;
+        height: 60vh; /* Increase height on mobile */
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .name-box {
+        width: 50%;
+    }
+
+    canvas {
+        width: 50%;
+        height: 60vh; /* Increase height on tablet */
+    }
+}

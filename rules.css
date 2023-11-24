@@ -36,5 +36,37 @@ li {
     font-size: 25px;
     font-family: 'Noto Sans Display', sans-serif;
     margin-top: 10px;
-    margin-left: 1050px;
+    margin-left: 65%;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 60px !important;
+    }
+
+    .next {
+        font-size: 18px !important;
+    }
+
+    ul{
+        font-size: 20px !important;
+        padding: 8px 16px !important;
+    }
+    
+}
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 40px !important;
+    }
+
+    .next {
+        font-size: 18px !important;
+    }
+
+    ul{
+        font-size: 15px !important;
+        padding: 8px 16px !important;
+    }
 }
