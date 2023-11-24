@@ -38,22 +38,24 @@ canvas{
 /* Responsive adjustments using media queries */
 @media only screen and (max-width: 400px) {
     .name-box {
-        width: 60%;
+        width: 80%;
+        font-size: 4px;
     }
 
     canvas {
-        width: 50%;
-        height: 60vh; /* Increase height on mobile */
+        width: 90%;
+        height: 90vh; /* Increase height on mobile */
     }
 }
 
 @media only screen and (max-width: 600px) {
     .name-box {
-        width: 50%;
+        width: 80%;
+        font-size: 2px;
     }
 
     canvas {
-        width: 50%;
-        height: 60vh; /* Increase height on tablet */
+        width: 90%;
+        height: 80vh; /* Increase height on tablet */
     }
 }
