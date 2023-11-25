@@ -26,3 +26,9 @@ Day 4, Thursday:
 
 Day 5, Friday:
 - Debugging
+- Started making it responsive
+
+Day 6, Saturday:
+- Made it mobile responsive
+- Made the loom video
+- Final presentation
