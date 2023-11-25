@@ -63,10 +63,34 @@ li {
 
     .next {
         font-size: 18px !important;
+        margin-left: 50%;
     }
 
     ul{
         font-size: 15px !important;
-        padding: 8px 16px !important;
+        padding: 4px 10px !important;
+    }
+}
+
+@media only screen and (max-width: 200px) {
+    h1 {
+        font-size: 22px !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .next {
+        font-size: 12px !important;
+        width: 25px;
+        height: 12px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ul{
+        font-size: 10px !important;
     }
 }

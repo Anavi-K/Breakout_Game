@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function touchStartHandler(e) {
       e.preventDefault();
       var touch = e.touches[0];
-      touch = touch.clientX;
+      touchX = touch.clientX;
   }
 
   function touchMoveHandler(e) {
