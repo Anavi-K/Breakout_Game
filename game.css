@@ -38,8 +38,7 @@ canvas{
 /* Responsive adjustments using media queries */
 @media only screen and (max-width: 400px) {
     .name-box {
-        width: 80%;
-        font-size: 4px;
+        width: 100%;
     }
 
     canvas {
@@ -50,8 +49,7 @@ canvas{
 
 @media only screen and (max-width: 600px) {
     .name-box {
-        width: 80%;
-        font-size: 2px;
+        width: 100%;
     }
 
     canvas {
