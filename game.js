@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Style for text in name-box
   nameBox.style.color = "#FFFFFF";
-  nameBox.style.fontSize = "24px";
+  nameBox.style.fontSize = "20px";
   nameBox.style.textAlign = "center";
 
   // Audio elements
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function touchStartHandler(e) {
       e.preventDefault();
       var touch = e.touches[0];
-      touchX = touch.clientX;
+      touch = touch.clientX;
   }
 
   function touchMoveHandler(e) {

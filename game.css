@@ -23,7 +23,7 @@ body {
 .name-box {
     width: 500px;
     height: 30px;
-    background-color: #1e1e1e;
+    background-color: #000000;
 }
 
 canvas{
@@ -43,7 +43,7 @@ canvas{
 
     canvas {
         width: 90%;
-        height: 90vh; /* Increase height on mobile */
+        height: 90vh; 
     }
 }
 
@@ -54,6 +54,6 @@ canvas{
 
     canvas {
         width: 90%;
-        height: 80vh; /* Increase height on tablet */
+        height: 80vh; 
     }
 }
